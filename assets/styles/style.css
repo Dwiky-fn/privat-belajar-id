@@ -1,0 +1,365 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Jumbotron */
+#jumbotron {
+  background-color: #fff6e9;
+  color: #000;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+#jumbotron img {
+  max-width: 350px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+#jumbotron p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto auto;
+}
+
+/* Navbar */
+nav {
+  background-color: #ffbf66;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap; /* biar bisa turun ke bawah kalau sempit */
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 10px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #fff6e9;
+  color: #ffbf66;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+}
+
+.content {
+  flex: 2;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-wrap: wrap; /* biar bisa turun kalau layar sempit */
+  gap: 30px; /* jarak antar card */
+  justify-content: center; /* tengah */
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  flex: 1 1 300px; /* minimal lebar 300px, sisanya fleksibel */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* konten di dalam card urut vertikal */
+  gap: 15px;
+}
+
+/* Heading dalam card */
+.card h1,
+.card h2 {
+  color: #3d3d94;
+  margin-bottom: 10px;
+}
+
+/* Section title dengan teks oranye */
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.section-title .orange-text {
+  color: #ff8a00;
+}
+
+/* Tabel Metode & Harga */
+.methods-table,
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.methods-table th,
+.pricing-table th {
+  background: #ffbf66;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.methods-table td,
+.pricing-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.methods-table tr:nth-child(even),
+.pricing-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.methods-table tr:hover,
+.pricing-table tr:hover {
+  background: #fff6e9;
+}
+
+/* Catatan harga */
+.pricing-notes {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Teacher profile */
+aside {
+  flex: 1;
+}
+
+.teacher-profile {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* gambar di atas */
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.teacher-image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.teacher-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.teacher-info {
+  width: 100%;
+  text-align: center;
+}
+
+.teacher-name {
+  font-size: 2rem;
+  color: #3d3d94;
+  margin-bottom: 20px;
+}
+
+.teacher-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.teacher-tab {
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-tab.active {
+  background-color: #ff8a00;
+  color: white;
+}
+
+.teacher-description {
+  color: #555;
+  line-height: 1.8;
+}
+
+#education-content,
+#subjects-content {
+  display: none;
+  
+}
+
+.education-list,
+.subjects-list {
+  list-style: none;
+  color: #555;
+  line-height: 1.8;
+  padding: 0;
+}
+
+.education-list li,
+.subjects-list li {
+  margin-bottom: 10px;
+}
+
+.subjects-list li {
+  padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .teacher-profile {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .teacher-name {
+    font-size: 1.5rem;
+  }
+
+  .teacher-tab {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* card ditumpuk */
+    align-items: stretch;
+  }
+
+  .card {
+    width: 100%; /* full lebar di layar kecil */
+  }
+
+  .methods-table th,
+  .pricing-table th,
+  .methods-table td,
+  .pricing-table td {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
+/* Footer */
+footer {
+  background-color: #28293e;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;                 /* jarak antar elemen lebih konsisten */
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-height: 50px;
+}
+
+.footer-title h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  max-width: 600px;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffbf66;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .footer-container {
+    gap: 15px;
+  }
+  .footer-description {
+    font-size: 0.85rem;
+  }
+}
