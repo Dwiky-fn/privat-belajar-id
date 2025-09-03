@@ -1,2 +1,2 @@
-# privat-belajar-id
+# privat-pintar-id
 Sebuah website penyedia guru privat
